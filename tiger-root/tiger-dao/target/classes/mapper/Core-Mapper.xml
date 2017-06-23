@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.xyz.tiger.dao.base.IBaseDao">
+    <!-- 新增 -->
+    <insert id="insert">
+        ${value}
+    </insert>
+    
+    <!-- 新增 -->
+    <insert id="insertOfBatch">
+        ${value}
+    </insert>
+    
+    <!-- 根据ID删除 -->
+    <delete id="deleteById">
+        ${value}
+    </delete>
+ 
+    <!-- 批量删除 -->
+    <delete id="deleteByparm">
+        ${value}
+    </delete>
+    
+    <!-- 更新全部 -->
+    <update id="update">${value}</update>
+    
+    <!-- 按主键取记录 -->
+    <select id="selectOne" resultType="hashmap">
+        ${value}
+    </select>
+    
+    <!-- 查询全部信息 -->
+    <select id="selectList" resultType="hashmap">
+        ${value}
+    </select>
+    
+    <!-- 分页查询全部信息 -->
+    <select id="selectPagination" resultType="hashmap">
+        ${value}
+    </select>
+    
+    <!-- 查询总数量 -->
+    <select id="selectCount" resultType="Long">
+        ${value}
+    </select>
+    
+    <select id="fetchSeqNextval" resultType="Long" flushCache="true">
+        ${value}
+    </select>
+    
+    <!-- 自定义语句执行 -->
+    <update id="excuse">${value}</update>
+	     
+</mapper>
