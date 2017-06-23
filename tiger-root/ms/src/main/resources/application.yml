@@ -1,0 +1,27 @@
+logging:
+    level:
+        tk.mybatis: TRACE
+
+druid:
+    type: com.alibaba.druid.pool.DruidDataSource
+    master:
+        url: jdbc:mysql://10.4.53.39:3306/tiger?characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: root
+        initial-size: 5
+        min-idle: 1
+        max-active: 100
+        test-on-borrow: true
+    slave:
+        url: jdbc:mysql://10.4.53.39:3306/tigers1?characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: root
+        initial-size: 5
+        min-idle: 1
+        max-active: 100
+        test-on-borrow: true
+mybatis:
+    type-aliases-package: com.xyz.tiger.ms.domain
+

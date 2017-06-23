@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+
+mybatis:
+  configLocation: classpath:config/mybatis-config.xml
+  mapperLocations: classpath*:mapper/*.xml
+  typeAliasesPackage: com.xyz.tiger.running.domain
