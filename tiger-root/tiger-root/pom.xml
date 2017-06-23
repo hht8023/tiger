@@ -134,5 +134,4 @@
 		<module>tiger-cache</module>
 		<module>tiger-running</module>
 	</modules>
-  </modules>
 </project>
