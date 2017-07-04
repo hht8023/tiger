@@ -1,4 +1,4 @@
-package com.xyz.tiger.utils.date;
+package com.xyz.tiger.base.util.date;
 
 import java.text.ParseException;
 import java.text.ParsePosition;

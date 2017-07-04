@@ -1,4 +1,4 @@
-package com.xyz.tiger.utils.spirng;
+package com.xyz.tiger.base.util.spring;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

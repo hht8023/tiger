@@ -1,7 +1,7 @@
 /**
  * Copyright © 1998-2017, enn Inc. All Rights Reserved.
  */
-package com.xyz.tiger.utils.date;
+package com.xyz.tiger.base.util.date;
 
 import java.beans.PropertyEditorSupport;
 import java.util.Date;

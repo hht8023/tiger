@@ -1,7 +1,7 @@
 /**
  * Copyright © 1998-2017, enn Inc. All Rights Reserved.
  */
-package com.xyz.tiger.utils.log;
+package com.xyz.tiger.base.util.log;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
