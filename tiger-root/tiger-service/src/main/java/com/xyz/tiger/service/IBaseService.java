@@ -99,7 +99,25 @@ public interface IBaseService<T extends Serializable, PK extends Serializable> {
 	 * @return Map<String,Object> 返回类型
 	 */
 	Map<String, Object> selectOneM(T t, PK id);
-	
+
+	/**
+	 * 根据查询条件获取一条记录
+	 * 
+	 * @param cnds
+	 *            条件表达式
+	 * @return 记录实体对象，如果没有符合主键条件的记录，则返回null
+	 */
+	T selectOne(Cnds cnds);
+
+	/**
+	 * 根据查询条件获取一条记录
+	 * 
+	 * @param cnds
+	 *            条件表达式
+	 * @return Map<String,Object> 返回类型
+	 */
+	Map<String, Object> selectOneM(Cnds cnds);
+
 	/**
 	 * <p>
 	 * 根据查询条件获取记录
@@ -121,7 +139,7 @@ public interface IBaseService<T extends Serializable, PK extends Serializable> {
 	 * @return 全部记录List<Map<String, Object>>
 	 */
 	List<Map<String, Object>> selectListM(Cnds cnds);
-	
+
 	/**
 	 * 按条件查询记录，并处理成分页结果
 	 * 
@@ -134,7 +152,7 @@ public interface IBaseService<T extends Serializable, PK extends Serializable> {
 	 * @return 分页模型
 	 */
 	Pagination selectPagination(Cnds cnds, int page, int rows);
-	
+
 	/**
 	 * 按条件查询记录，并处理成分页结果
 	 * 

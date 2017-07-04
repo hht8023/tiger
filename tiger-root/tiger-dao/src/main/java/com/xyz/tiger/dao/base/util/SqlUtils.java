@@ -4,8 +4,8 @@ import java.util.Date;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.xyz.tiger.utils.date.DateStyle;
-import com.xyz.tiger.utils.date.DateUtil;
+import com.xyz.tiger.base.util.date.DateStyle;
+import com.xyz.tiger.base.util.date.DateUtil;
 
 /**
  * SQL工具类

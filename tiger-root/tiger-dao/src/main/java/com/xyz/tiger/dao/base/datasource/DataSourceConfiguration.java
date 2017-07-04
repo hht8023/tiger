@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-import com.xyz.tiger.utils.log.LogUtil;
+import com.xyz.tiger.base.util.log.LogUtil;
 
 /**
  * 解析配置项

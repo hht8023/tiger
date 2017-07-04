@@ -1,13 +1,9 @@
-/**
- * Copyright © 1998-2017, enn Inc. All Rights Reserved.
- */
-package com.xyz.tiger.cache.config;
+package com.xyz.tiger.cache.redis.config;
 
-import org.springframework.cache.CacheManager;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
@@ -18,25 +14,87 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-/**
- * 缓存管理
- * 
- * @author Hanht
- * @date 2017年5月24日
- */
+
 @Configuration
 @PropertySource("classpath:application-cache.properties")
-public class CacheConfig{
+@ConfigurationProperties(prefix ="redis")
+public class RedisConfiguration {
+	
+    private  String host;
+    private  String port;
+    private  String timeout;
+    private  String passwords;
+
+    private  String maxtotal;
+    private  String maxidle;
+    private  String minidle;
+    private  String maxwaitmillis;
+    private  String testonborrow;
+    private  String testwhileidle;
     
-	@Bean
-	public CacheManager cacheManager(RedisTemplate<?, ?> redisTemplate) {
-		CacheManager cacheManager = new RedisCacheManager(redisTemplate);
-		return cacheManager;
+	public String getHost() {
+		return host;
+	}
+	public void setHost(String host) {
+		this.host = host;
+	}
+	public String getPort() {
+		return port;
+	}
+	public void setPort(String port) {
+		this.port = port;
+	}
+	public String getTimeout() {
+		return timeout;
+	}
+	public void setTimeout(String timeout) {
+		this.timeout = timeout;
+	}
+	public String getPasswords() {
+		return passwords;
+	}
+	public void setPasswords(String passwords) {
+		this.passwords = passwords;
+	}
+	public String getMaxtotal() {
+		return maxtotal;
+	}
+	public void setMaxtotal(String maxtotal) {
+		this.maxtotal = maxtotal;
+	}
+	public String getMaxidle() {
+		return maxidle;
+	}
+	public void setMaxidle(String maxidle) {
+		this.maxidle = maxidle;
+	}
+	public String getMinidle() {
+		return minidle;
+	}
+	public void setMinidle(String minidle) {
+		this.minidle = minidle;
+	}
+	public String getMaxwaitmillis() {
+		return maxwaitmillis;
+	}
+	public void setMaxwaitmillis(String maxwaitmillis) {
+		this.maxwaitmillis = maxwaitmillis;
+	}
+	public String getTestonborrow() {
+		return testonborrow;
+	}
+	public void setTestonborrow(String testonborrow) {
+		this.testonborrow = testonborrow;
+	}
+	public String getTestwhileidle() {
+		return testwhileidle;
+	}
+	public void setTestwhileidle(String testwhileidle) {
+		this.testwhileidle = testwhileidle;
 	}
 
 	@Bean
 	public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory factory) {
-		System.out.println("处理String key");
 		RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
 		redisTemplate.setConnectionFactory(factory);
 		// key序列化方式,但是如果方法上有Long等非String类型的话，会报类型转换错误
@@ -56,5 +114,4 @@ public class CacheConfig{
 
 		return redisTemplate;
 	}
-
 }

@@ -1,6 +1,6 @@
 package com.xyz.tiger.dao.base.datasource;
 
-import com.xyz.tiger.utils.log.LogUtil;
+import com.xyz.tiger.base.util.log.LogUtil;
 
 
 /**

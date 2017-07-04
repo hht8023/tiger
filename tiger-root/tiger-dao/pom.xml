@@ -29,7 +29,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.xyz.tiger</groupId>
-			<artifactId>tiger-utils</artifactId>
+			<artifactId>tiger-base</artifactId>
 			<version>${tiger-utils}</version>
 		</dependency>
 	</dependencies>

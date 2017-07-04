@@ -26,11 +26,11 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 import org.springframework.transaction.PlatformTransactionManager;
 
+import com.xyz.tiger.base.util.log.LogUtil;
+import com.xyz.tiger.base.util.spring.SpringContextHolder;
 import com.xyz.tiger.dao.base.datasource.DataSourceConfiguration;
 import com.xyz.tiger.dao.base.datasource.DataSourceContextHolder;
 import com.xyz.tiger.dao.base.datasource.DataSourceType;
-import com.xyz.tiger.utils.log.LogUtil;
-import com.xyz.tiger.utils.spirng.SpringContextHolder;
 
 /**
  * 注册数据源

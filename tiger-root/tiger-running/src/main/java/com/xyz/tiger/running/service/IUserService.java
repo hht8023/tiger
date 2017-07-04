@@ -5,7 +5,7 @@ import com.xyz.tiger.service.IBaseService;
 
 public interface IUserService extends IBaseService<User, String>{
 
-	int insertUser(User user);
+	void insertUser(User user);
 	
 	User findById(String id);
 	

@@ -5,9 +5,9 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import com.xyz.tiger.base.util.log.LogUtil;
 import com.xyz.tiger.dao.base.datasource.DataSourceContextHolder;
 import com.xyz.tiger.dao.base.datasource.DataSourceType;
-import com.xyz.tiger.utils.log.LogUtil;
 
 /**
  * 在service层切换数据源

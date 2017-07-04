@@ -13,6 +13,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.xyz.tiger.base.util.log.LogUtil;
 import com.xyz.tiger.dao.base.IBaseDao;
 import com.xyz.tiger.dao.base.annotation.Ignore;
 import com.xyz.tiger.dao.base.annotation.PUBVALUE;
@@ -23,7 +24,6 @@ import com.xyz.tiger.dao.base.sql.SQLGenerator;
 import com.xyz.tiger.dao.base.sql.conditions.Cnds;
 import com.xyz.tiger.dao.base.util.ReflectionUtils;
 import com.xyz.tiger.dao.base.util.UUIDGenerator;
-import com.xyz.tiger.utils.log.LogUtil;
 
 @Repository
 public class BaseDao<T extends Serializable, PK extends Serializable> implements IBaseDao<T, PK> {

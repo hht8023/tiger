@@ -9,11 +9,11 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.xyz.tiger.base.util.log.LogUtil;
 import com.xyz.tiger.dao.base.IBaseDao;
 import com.xyz.tiger.dao.base.sql.conditions.Cnds;
 import com.xyz.tiger.dao.base.util.page.Pagination;
 import com.xyz.tiger.service.IBaseService;
-import com.xyz.tiger.utils.log.LogUtil;
 
 /**
  * 业务层基础接口实现
@@ -70,6 +70,16 @@ public class BaseService<T extends Serializable, PK extends Serializable> implem
 	@Override
 	public Map<String, Object> selectOneM(T t, PK id) {
 		return baseDao.selectOneM(t, id);
+	}
+
+	@Override
+	public T selectOne(Cnds cnds) {
+		return baseDao.selectList(cnds).get(0);
+	}
+
+	@Override
+	public Map<String, Object> selectOneM(Cnds cnds) {
+		return baseDao.selectListM(cnds).get(0);
 	}
 
 	@Override
